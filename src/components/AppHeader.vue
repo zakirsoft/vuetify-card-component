@@ -1,5 +1,4 @@
 <template>
-  <v-app id="inspire">
     <v-app-bar color="grey lighten-3" flat dense class="flex-grow-0" >
       <v-container class="py-0 fill-height">
         <v-hover v-slot="{ hover }" v-for="link in links" :key="link">
@@ -31,50 +30,12 @@
 
         <v-spacer></v-spacer>
 
-        <v-responsive max-width="260">
-          <v-text-field dense flat hide-details rounded solo-inverted></v-text-field>
-          mdi-reload
+        <v-responsive max-width="30">
+          <!-- <v-text-field dense flat hide-details rounded solo-inverted></v-text-field> -->
+          <v-icon class="black--text">mdi-reload</v-icon>
         </v-responsive>
       </v-container>
     </v-app-bar>
-
-    <v-main class="white lighten-3">
-      <v-container>
-        <v-row>
-          <v-col cols="2">
-            <v-sheet rounded="lg">
-              <v-list color="transparent">
-                <v-list-item v-for="n in 5" :key="n" link>
-                  <v-list-item-content>
-                    <v-list-item-title>
-                      List Item {{ n }}
-                    </v-list-item-title>
-                  </v-list-item-content>
-                </v-list-item>
-
-                <v-divider class="my-2"></v-divider>
-
-                <v-list-item link color="grey lighten-4">
-                  <v-list-item-content>
-                    <v-list-item-title>
-                      Refresh
-                    </v-list-item-title>
-                  </v-list-item-content>
-                </v-list-item>
-              </v-list>
-            </v-sheet>
-          </v-col>
-
-          <v-col>
-            <v-sheet min-height="70vh" rounded="lg">
-              <!--  -->
-            </v-sheet>
-          </v-col>
-        </v-row>
-      </v-container>
-    </v-main>
-    <!-- Vue Template HTML Markup -->
-  </v-app>
 </template>
 
 <script>
@@ -86,6 +47,14 @@
         'All Stats',
         'all Vehicles',
       ],
+
+        rules: {
+          age: [
+            val => val < 10 || `I don't believe you!`,
+          ],
+          animal: [val => (val || '').length > 0 || 'This field is required'],
+          name: [val => (val || '').length > 0 || 'This field is required'],
+        },
     }),
   }
 </script>

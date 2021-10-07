@@ -8,7 +8,8 @@
         </v-hover>
         <v-spacer></v-spacer>
         <v-responsive max-width="30">
-          <v-icon class="black--text">mdi-reload</v-icon>
+            <font-awesome-icon icon="redo" />
+          <!-- <v-icon class="black--text">mdi-reload</v-icon> -->
         </v-responsive>
       </v-container>
     </v-app-bar>

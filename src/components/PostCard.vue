@@ -10,43 +10,51 @@
               </v-carousel>
 
                 <v-btn v-if="hover" depressed tile absolute top right style="top: 0; right: 0" class="rounded-bl-lg rounded-tr-lg white--text" color="blue" height="50">
-                  <v-icon>mdi-link-variant</v-icon>
+                  <!-- <v-icon>mdi-link-variant</v-icon> -->
+                  <font-awesome-icon icon="link" />
                 </v-btn>
             </div>
             <v-card-actions class="d-flex pa-0">
               <v-btn depressed tile class="flex-grow-1 flex-shrink-1 white--text ms-0" height="60" :class="hover ? 'blue' : ' grey darken-1'">
                 <div class="d-flex flex-column">
-                  <v-icon>mdi-facebook</v-icon>
+                  <!-- <v-icon>mdi-facebook</v-icon> -->
+                  <font-awesome-icon :icon="['fab', 'facebook']" />
+
                   <span class="caption font-weight-bold">2137</span>
                 </div>
               </v-btn>
               <v-btn depressed tile class="flex-grow-1 flex-shrink-1 white--text ms-0" height="60" :class="hover ? 'pink lighten-2' : ' grey darken-1'">
                 <div class="d-flex flex-column">
-                  <v-icon>mdi-instagram</v-icon>
+                  <!-- <v-icon>mdi-instagram</v-icon> -->
+                  <font-awesome-icon :icon="['fab', 'instagram']" />
                   <span class="caption font-weight-bold">539</span>
                 </div>
               </v-btn>
               <v-btn depressed tile class="flex-grow-1 flex-shrink-1 white--text ms-0" height="60" :class="hover ? 'red darken-1' : ' grey darken-1'">
                 <div class="d-flex flex-column">
-                  <v-icon>mdi-youtube</v-icon>
+                  <!-- <v-icon>mdi-youtube</v-icon> -->
+                  <font-awesome-icon :icon="['fab', 'youtube']" />
                   <span class="caption font-weight-bold">275</span>
                 </div>
               </v-btn>
               <v-btn depressed tile class="flex-grow-1 flex-shrink-1 white--text ms-0" height="60" :class="hover ? 'green lighten-1' : ' grey darken-1'">
                 <div class="d-flex flex-column">
-                  <v-icon>mdi-whatsapp</v-icon>
+                  <!-- <v-icon>mdi-whatsapp</v-icon> -->
+                  <font-awesome-icon :icon="['fas', 'sms']" />
                   <span class="caption font-weight-bold">7</span>
                 </div>
               </v-btn>
               <v-btn depressed tile class="flex-grow-1 flex-shrink-1 white--text ms-0" height="60" :class="hover ? 'teal lighten-2' : ' grey darken-1'">
                 <div class="d-flex flex-column">
-                  <v-icon>mdi-email</v-icon>
+                  <!-- <v-icon>mdi-email</v-icon> -->
+                  <font-awesome-icon :icon="['fas', 'envelope']" />
                   <span class="caption font-weight-bold">7</span>
                 </div>
               </v-btn>
               <v-btn depressed tile class="flex-grow-1 flex-shrink-1 white--text ms-0" height="60" :class="hover ? 'cyan lighten-1' : ' grey darken-1'">
                 <div class="d-flex flex-column">
-                  <v-icon>mdi-remote-desktop</v-icon>
+                  <!-- <v-icon>mdi-remote-desktop</v-icon> -->
+                  <font-awesome-icon :icon="['fas', 'laptop-code']" />
                   <span class="caption font-weight-bold">436</span>
                 </div>
               </v-btn>
@@ -54,12 +62,14 @@
             <v-card-text class="pt-6" style="position: relative;">
               <div class="d-flex justify-space-between align-center">
                 <p class="mb-0">
-                  <v-icon small>mdi-map-marker</v-icon>
+                  <!-- <v-icon small>mdi-map-marker</v-icon> -->
+                  <font-awesome-icon :icon="['fas', 'map-marker-alt']" />
                   Weillington City, Wellington
                 </p>
                 <v-btn depressed color="blue" class="rounded-pill white--text text-lowercase font-weight-light">
                   used in <strong> 5 </strong> videos
-                  <v-icon small>mdi-play</v-icon>
+                  <!-- <v-icon small>mdi-play</v-icon> -->
+                  <font-awesome-icon :icon="['fas', 'play']" />
                 </v-btn>
               </div>
               <h2 class="font-weight-bold black--text text headline mt-3 mb-2">
@@ -71,23 +81,28 @@
               </div>
               <div class="d-flex flex-wrap py-5">
                 <v-btn outlined small text class="rounded-pill grey--text me-2 mb-2 text-capitalize">
-                  <v-icon small>mdi-cart</v-icon>
+                  <!-- <v-icon small>mdi-cart</v-icon> -->
+                  <font-awesome-icon :icon="['fas', 'tachometer-alt']" />
                   82,000 Km
                 </v-btn>
                 <v-btn outlined small text class="rounded-pill grey--text me-2 mb-2 text-capitalize">
-                  <v-icon small>mdi-car</v-icon>
+                  <!-- <v-icon small>mdi-car</v-icon> -->
+                  <font-awesome-icon :icon="['fas', 'car-side']" />
                   RV/SUV
                 </v-btn>
                 <v-btn outlined small text class="rounded-pill grey--text me-2 mb-2 text-capitalize">
                   <v-icon small>mdi-car-seat</v-icon>
+                  <!-- <font-awesome-icon :icon="['fas', 'facebook']" /> -->
                   8
                 </v-btn>
                 <v-btn outlined small text class="rounded-pill grey--text me-2 mb-2 text-capitalize">
-                  <v-icon small>mdi-water-boiler</v-icon>
+                  <!-- <v-icon small>mdi-water-boiler</v-icon> -->
+                  <font-awesome-icon :icon="['fas', 'gas-pump']" />
                   Diesel
                 </v-btn>
                 <v-btn outlined small text class="rounded-pill grey--text me-2 mb-2 text-capitalize">
-                  <v-icon small>mdi-speedometer</v-icon>
+                  <!-- <v-icon small>mdi-speedometer</v-icon> -->
+                  <font-awesome-icon :icon="['fas', 'tachometer-alt']" />
                   4461cc
                 </v-btn>
                 <v-btn outlined small text class="rounded-pill grey--text me-2 mb-2 text-capitalize">
@@ -108,25 +123,31 @@
                 </v-btn>
               </div>
               <v-btn tile depressed large block color="blue" class="white--text rounded-pill" style="position: relative">
-                <v-icon absolute left top >mdi-video-plus</v-icon>
+                <!-- <v-icon absolute left top >mdi-video-plus</v-icon> -->
+                <font-awesome-icon :icon="['fas', 'video']" />
                 Create Video
               </v-btn>
             </v-card-text>
             <v-card-actions class="grey lighten-4 d-flex justify-space-between">
               <v-btn icon>
-                <v-icon>mdi-information-outline</v-icon>
+                <!-- <v-icon>mdi-information-outline</v-icon> -->
+                <font-awesome-icon :icon="['fas', 'info']" />
               </v-btn>
               <v-btn icon>
-                <v-icon>mdi-reload</v-icon>
+                <!-- <v-icon>mdi-reload</v-icon> -->
+                <font-awesome-icon :icon="['fas', 'redo-alt']" />
               </v-btn>
               <v-btn icon>
-                <v-icon>mdi-cloud-download</v-icon>
+                <!-- <v-icon>mdi-cloud-download</v-icon> -->
+                <font-awesome-icon :icon="['fas', 'cloud-download-alt']" />
               </v-btn>
               <v-btn icon>
-                <v-icon>mdi-file-document-edit-outline</v-icon>
+                <!-- <v-icon>mdi-file-document-edit-outline</v-icon> -->
+                <font-awesome-icon :icon="['fas', 'edit']" />
               </v-btn>
               <v-btn icon>
-                <v-icon>mdi-dots-vertical</v-icon>
+                <!-- <v-icon>mdi-dots-vertical</v-icon> -->
+                <font-awesome-icon :icon="['fas', 'ellipsis-v']" />
               </v-btn>
             </v-card-actions>
           </v-card>

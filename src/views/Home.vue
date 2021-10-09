@@ -1,7 +1,7 @@
 <template>
   <div class="white">
     <v-container>
-        <v-sheet min-height="70vh" rounded="lg">
+        <v-sheet min-height="70vh" rounded="lg" style="margin-bottom: 120px">
           <post-card />
         </v-sheet>
     </v-container>

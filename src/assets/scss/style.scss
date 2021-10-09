@@ -1,0 +1,35 @@
+.v-application {
+  button.bg-color {
+    background-color: #317DFF !important;
+  }
+  
+  .video-icon {
+    position: absolute;
+    left: 0px;
+  }
+  
+  .post-card-gallery .v-carousel__controls .v-btn.v-btn--icon {
+    height: 22px;
+    width: 22px;
+    margin: 0 3px;  
+  }
+
+  .app-search-form {
+    margin: 0px 10px;
+    .v-text-field>.v-input__control>.v-input__slot:before {
+      border-color: transparent !important;
+    }
+    .v-text-field{
+      .v-text-field__slot{
+        margin-left: 110px;
+        margin-right: 50px;
+      }
+      &>.v-input__control>.v-input__slot:after {
+        border-color: transparent !important;
+        background-color: transparent !important;
+      }
+    }
+  }
+}
+
+

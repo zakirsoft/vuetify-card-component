@@ -1,40 +1,16 @@
 <template>
   <v-card flat>
-    <v-snackbar
-      v-model="snackbar"
-      absolute
-      top
-      right
-      color="success"
-    >
+    <!-- <v-snackbar v-model="snackbar" absolute top right color="success">
       <span>Registration successful!</span>
       <v-icon dark>
         mdi-checkbox-marked-circle
       </v-icon>
-    </v-snackbar>
-
-    <v-form
-      ref="form"
-      @submit.prevent="submit"
-    >
-      <v-container>
-        <v-row>
-          <v-col
-            cols="12"
-            sm="12"
-          >
-            <v-text-field
-              v-model="form.first"
-              :rules="rules.name"
-              color="purple darken-2"
-              label="First name"
-              required
-            ></v-text-field>
-          </v-col>
-          
-        </v-row>
-      </v-container>
-    </v-form>
+    </v-snackbar> -->
+    <v-container>
+      <v-form ref="form" @submit.prevent="submit" class="app-search-form">
+          <v-text-field v-text-field append-icon="mdi-filter" prepend-icon="mdi-briefcase-search" label="Main input" hide-details="auto"></v-text-field>
+      </v-form>
+    </v-container>
   </v-card>
 </template>
 <script>

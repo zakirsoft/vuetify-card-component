@@ -4,7 +4,7 @@
       <v-col v-for="n in 4" :key="n" cols="3">
         <v-hover v-slot="{ hover }">
           <v-card elevation="0" outlined class="rounded-lg" style="overflow: hidden">
-            <div style="position: relative">
+            <div style="position: relative" class="post-card-gallery">
               <v-carousel :show-arrows="false" height="300">
                 <v-carousel-item v-for="(item,i) in items" :key="i" :src="item.src"></v-carousel-item>
               </v-carousel>
@@ -57,7 +57,7 @@
                   <v-icon small>mdi-map-marker</v-icon>
                   Weillington City, Wellington
                 </p>
-                <v-btn depressed color="blue" class="rounded-pill white--text text-lowercase font-weight-light">
+                <v-btn depressed color="blue" class="rounded-pill white--text text-lowercase font-weight-light bg-color">
                   used in <strong> 5 </strong> videos
                   <v-icon small>mdi-play</v-icon>
                 </v-btn>
@@ -72,43 +72,45 @@
               <div class="d-flex flex-wrap py-5">
                 <v-btn outlined small text class="rounded-pill grey--text me-2 mb-2 text-capitalize">
                   <v-icon small>mdi-cart</v-icon>
-                  82,000 Km
+                  <strong>82,000 Km</strong>
                 </v-btn>
                 <v-btn outlined small text class="rounded-pill grey--text me-2 mb-2 text-capitalize">
                   <v-icon small>mdi-car</v-icon>
-                  RV/SUV
+                  <strong>RV/SUV</strong>
                 </v-btn>
                 <v-btn outlined small text class="rounded-pill grey--text me-2 mb-2 text-capitalize">
                   <v-icon small>mdi-car-seat</v-icon>
-                  8
+                  <strong>8</strong>
                 </v-btn>
                 <v-btn outlined small text class="rounded-pill grey--text me-2 mb-2 text-capitalize">
                   <v-icon small>mdi-water-boiler</v-icon>
-                  Diesel
+                  <strong>Diesel</strong>
                 </v-btn>
                 <v-btn outlined small text class="rounded-pill grey--text me-2 mb-2 text-capitalize">
                   <v-icon small>mdi-speedometer</v-icon>
-                  4461cc
+                  <strong>4461cc</strong>
                 </v-btn>
                 <v-btn outlined small text class="rounded-pill grey--text me-2 mb-2 text-capitalize">
-                  Exterior Colour: White
+                  Exterior Colour: <strong>White</strong>
                 </v-btn>
                 <v-btn outlined small text class="rounded-pill grey--text me-2 mb-2 text-capitalize">
-                  Doors: 5 door
+                  Doors: <strong>5 door</strong>
                 </v-btn>
                 <v-btn outlined small text class="rounded-pill grey--text me-2 mb-2 text-capitalize">
                   <v-icon small>mdi-sitemap</v-icon>
-                  Automatic
+                  <strong>Automatic</strong>
                 </v-btn>
                 <v-btn outlined small text class="rounded-pill grey--text me-2 mb-2 text-capitalize">
-                  Cylinders: 8 cylinder
+                  Cylinders: <strong> 8 cylinder</strong>
                 </v-btn>
                 <v-btn outlined small text class="rounded-pill grey--text me-2 mb-2 text-capitalize">
-                  4WD
+                  <strong>4WD</strong>
                 </v-btn>
               </div>
-              <v-btn tile depressed large block color="blue" class="white--text rounded-pill" style="position: relative">
-                <v-icon absolute left top >mdi-video-plus</v-icon>
+              <v-btn tile depressed large block color="blue" class="white--text rounded-pill bg-color" style="position: relative">
+                <div class="video-icon">
+                  <v-icon>mdi-video-plus</v-icon>
+                </div>
                 Create Video
               </v-btn>
             </v-card-text>
@@ -125,9 +127,24 @@
               <v-btn icon>
                 <v-icon>mdi-file-document-edit-outline</v-icon>
               </v-btn>
-              <v-btn icon>
-                <v-icon>mdi-dots-vertical</v-icon>
-              </v-btn>
+              <v-menu transition="slide-y-transition" bottom :left="true">
+                <template v-slot:activator="{ on, attrs }">
+                  <v-btn icon v-bind="attrs" v-on="on">
+                    <v-icon>mdi-dots-vertical</v-icon>
+                  </v-btn>
+                </template>
+                <v-list>
+                  <v-list-item key="1">
+                    <v-list-item-title> Demo Menu 1 </v-list-item-title>
+                  </v-list-item>
+                  <v-list-item key="2">
+                    <v-list-item-title> Demo Menu 2 </v-list-item-title>
+                  </v-list-item>
+                  <v-list-item key="3">
+                    <v-list-item-title> Demo Menu 3 </v-list-item-title>
+                  </v-list-item>
+                </v-list>
+              </v-menu>
             </v-card-actions>
           </v-card>
         </v-hover>

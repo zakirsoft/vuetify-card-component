@@ -1,9 +1,9 @@
 <template>
   <v-container fluid>
     <v-row dense>
-      <v-col v-for="n in 4" :key="n" cols="3">
+      <v-col v-for="n in 4" :key="n" xl="3" lg="4" md="6" sm="12" xs="12">
         <v-hover v-slot="{ hover }">
-          <v-card elevation="0" outlined class="rounded-lg" style="overflow: hidden">
+          <v-card elevation="0" outlined class="rounded-lg" style="overflow: hidden; margin: 15px 0;">
             <div style="position: relative" class="post-card-gallery">
               <v-carousel :show-arrows="false" height="300">
                 <v-carousel-item v-for="(item,i) in items" :key="i" :src="item.src"></v-carousel-item>

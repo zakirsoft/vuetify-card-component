@@ -2,6 +2,11 @@
   button.bg-color {
     background-color: #317DFF !important;
   }
+
+  .v-application--wrap header.app-header {
+    background-color: #DFDFE0 !important;
+    border-color: #DFDFE0 !important;
+  }
   
   .video-icon {
     position: absolute;
@@ -21,12 +26,26 @@
     }
     .v-text-field{
       .v-text-field__slot{
-        margin-left: 110px;
-        margin-right: 50px;
+        // margin-left: 40px;
+        // margin-right: 50px;
       }
       &>.v-input__control>.v-input__slot:after {
         border-color: transparent !important;
         background-color: transparent !important;
+      }
+    }
+
+    .v-text-field {
+      padding-top: 12px;
+      margin-top: 4px;
+      padding-bottom: 12px;
+    }
+  }
+  .mobile-menu {
+    padding: 50px 0;
+    .v-navigation-drawer__content {
+      button.v-btn {
+        width: 100%;
       }
     }
   }
